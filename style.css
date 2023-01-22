@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    padding: 20px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover {
+    cursor: pointer;
+}
+
+.boxes {
+    display: flex;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    margin-top: 125px;
+}
+
+#box1, #box2, #box4, #box5 {
+    border-bottom: 0;
+    border-right: 0;
+}
+
+#box7, #box8 {
+    border-right: 0;
+}
+
+#box3, #box6 {
+    border-bottom: 0;
+}
+
+.object {
+    width: 70px;
+    height: 70px;
+}
+
+.bar {
+    display: flex;
+    border: 1px solid black;
+    padding: 20px;
+    width: 200px;
+    margin: 20px;
+    background-color: lawngreen;
+}
+
+#image {
+    width: 30px;
+    height: 30px;
+    margin-left: 50px;
+}
+
+.scoreboard {
+    display: flex;
+}
+
+#triangle {
+	width: 0;
+	height: 0;
+	border-bottom: 100px solid #017fc9;
+	border-left: 100px solid transparent;
+	margin: 25px auto 0;
+    margin-right: 0;
+}
+
+.scores {
+    background-color: #017fc9;
+    width: 500px;
+    height: 100px;
+	margin: 25px auto 0;
+    margin-left: 0;
+    margin-right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#triangle2{
+	width: 0;
+	height: 0;
+	border-bottom: 100px solid #017fc9;
+	border-right: 100px solid transparent;
+	margin: 25px auto 0;
+    margin-left: 0;
+}
+
+#vs {
+    width: 100px;
+    height: 100px;
+}
+
+#userimg {
+    width: 50px;
+    height: 50px;
+}
+
+.user {
+    display: flex;
+}
+
+.communicats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+}
+
+.communicatw {
+    background-color: rgb(79, 202, 255);
+    box-shadow: 1px 1px 10px 1px black;
+    border-radius: 10px;
+    position: absolute;
+    width: 700px;
+    height: 450px;
+    padding: 20px;
+    display: none;
+}
+
+.contentw {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.corona {
+    width: 100px;
+    height: 100px;
+}
+
+.text {
+    text-align: center;
+}
+
+.wimg {
+    width: 100px;
+    height: 100px;
+}
+
+.anim1-event {
+    animation-name: anim1;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.buttons {
+    background-color: chartreuse;
+    border: 1px solid black;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.buttons:hover {
+    background-color: rgb(87, 174, 0);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+@keyframes anim1{
+    from {
+        width: 500px;
+        height: 250px;
+        padding: 0;
+    }
+    to {
+        width: 700px;
+        height: 450px;
+        padding: 20px;
+    }
+}
