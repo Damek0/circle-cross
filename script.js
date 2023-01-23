@@ -9,6 +9,9 @@ let box8 = document.querySelector('#box8');
 let box9 = document.querySelector('#box9');
 
 let b1 = document.querySelector('#b1');
+let clear = document.querySelector('#clear');
+let daytheme = document.querySelector('#daytheme');
+let nighttheme = document.querySelector('#nighttheme');
 
 let box1work = 0;
 let box2work = 0;
@@ -218,7 +221,7 @@ function change() {
     }
 }
 
-function checkw() {
+async function checkw() {
     if ((field1 == 'x' && field2 == 'x' && field3 == 'x')
     || (field4 == 'x' && field5 == 'x' && field6 == 'x')
     || (field7 == 'x' && field8 == 'x' && field9 == 'x')
@@ -231,6 +234,9 @@ function checkw() {
     || (field3 == 'x' && field5 == 'x' && field7 == 'x')
     ) {
         win = 'x';
+        checkfieldsx();
+        blockclick();
+        await sleep(1000);
         scorexadd();
         document.querySelector('#textwhowon').textContent = "X won!";
         document.querySelector('#imgwhowon').src = 'img/x.png';
@@ -250,6 +256,9 @@ function checkw() {
     || (field3 == 'o' && field5 == 'o' && field7 == 'o')
     ) {
         win = 'o';
+        checkfieldso();
+        blockclick();
+        await sleep(1000);
         scoreoadd();
         document.querySelector('#textwhowon').textContent = "O won!";
         document.querySelector('#imgwhowon').src = 'img/circle.png';
@@ -295,6 +304,16 @@ function resetall() {
     document.querySelector('#obj7').src = 'img/air.png';
     document.querySelector('#obj8').src = 'img/air.png';
     document.querySelector('#obj9').src = 'img/air.png';
+
+    document.querySelector('#box1').classList.remove('field-event');
+    document.querySelector('#box2').classList.remove('field-event');
+    document.querySelector('#box3').classList.remove('field-event');
+    document.querySelector('#box4').classList.remove('field-event');
+    document.querySelector('#box5').classList.remove('field-event');
+    document.querySelector('#box6').classList.remove('field-event');
+    document.querySelector('#box7').classList.remove('field-event');
+    document.querySelector('#box8').classList.remove('field-event');
+    document.querySelector('#box9').classList.remove('field-event');
 }
 
 b1.addEventListener('click', function() {
@@ -311,3 +330,116 @@ function scoreoadd() {
     scoreo++;
     document.querySelector('#scoreo').textContent = scoreo;
 }
+
+clear.addEventListener('click', function(){
+    resetall();
+});
+
+async function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function checkfieldsx() {
+    if ((field1 == 'x' && field2 == 'x' && field3 == 'x')) {
+        document.querySelector('#box1').classList.add('field-event');
+        document.querySelector('#box2').classList.add('field-event');
+        document.querySelector('#box3').classList.add('field-event');
+    }
+    if ((field4 == 'x' && field5 == 'x' && field6 == 'x')) {
+        document.querySelector('#box4').classList.add('field-event');
+        document.querySelector('#box5').classList.add('field-event');
+        document.querySelector('#box6').classList.add('field-event');
+    }
+    if ((field7 == 'x' && field8 == 'x' && field9 == 'x')) {
+        document.querySelector('#box7').classList.add('field-event');
+        document.querySelector('#box8').classList.add('field-event');
+        document.querySelector('#box9').classList.add('field-event');
+    }
+    if ((field1 == 'x' && field4 == 'x' && field7 == 'x')) {
+        document.querySelector('#box1').classList.add('field-event');
+        document.querySelector('#box4').classList.add('field-event');
+        document.querySelector('#box7').classList.add('field-event');
+    }
+    if ((field2 == 'x' && field5 == 'x' && field8 == 'x')) {
+        document.querySelector('#box2').classList.add('field-event');
+        document.querySelector('#box5').classList.add('field-event');
+        document.querySelector('#box8').classList.add('field-event');
+    }
+    if ((field3 == 'x' && field6 == 'x' && field9 == 'x')) {
+        document.querySelector('#box3').classList.add('field-event');
+        document.querySelector('#box6').classList.add('field-event');
+        document.querySelector('#box9').classList.add('field-event');
+    }
+    if ((field1 == 'x' && field5 == 'x' && field9 == 'x')) {
+        document.querySelector('#box1').classList.add('field-event');
+        document.querySelector('#box5').classList.add('field-event');
+        document.querySelector('#box9').classList.add('field-event');
+    }
+    if ((field3 == 'x' && field5 == 'x' && field7 == 'x')) {
+        document.querySelector('#box3').classList.add('field-event');
+        document.querySelector('#box5').classList.add('field-event');
+        document.querySelector('#box7').classList.add('field-event');
+    }
+}
+async function checkfieldso() {
+    if ((field1 == 'o' && field2 == 'o' && field3 == 'o')) {
+        document.querySelector('#box1').classList.add('field-event');
+        document.querySelector('#box2').classList.add('field-event');
+        document.querySelector('#box3').classList.add('field-event');
+    }
+    if ((field4 == 'o' && field5 == 'o' && field6 == 'o')) {
+        document.querySelector('#box4').classList.add('field-event');
+        document.querySelector('#box5').classList.add('field-event');
+        document.querySelector('#box6').classList.add('field-event');
+    }
+    if ((field7 == 'o' && field8 == 'o' && field9 == 'o')) {
+        document.querySelector('#box7').classList.add('field-event');
+        document.querySelector('#box8').classList.add('field-event');
+        document.querySelector('#box9').classList.add('field-event');
+    }
+    if ((field1 == 'o' && field4 == 'o' && field7 == 'o')) {
+        document.querySelector('#box1').classList.add('field-event');
+        document.querySelector('#box4').classList.add('field-event');
+        document.querySelector('#box7').classList.add('field-event');
+    }
+    if ((field2 == 'o' && field5 == 'o' && field8 == 'o')) {
+        document.querySelector('#box2').classList.add('field-event');
+        document.querySelector('#box5').classList.add('field-event');
+        document.querySelector('#box8').classList.add('field-event');
+    }
+    if ((field3 == 'o' && field6 == 'o' && field9 == 'o')) {
+        document.querySelector('#box3').classList.add('field-event');
+        document.querySelector('#box6').classList.add('field-event');
+        document.querySelector('#box9').classList.add('field-event');
+    }
+    if ((field1 == 'o' && field5 == 'o' && field9 == 'o')) {
+        document.querySelector('#box1').classList.add('field-event');
+        document.querySelector('#box5').classList.add('field-event');
+        document.querySelector('#box9').classList.add('field-event');
+    }
+    if ((field3 == 'o' && field5 == 'o' && field7 == 'o')) {
+        document.querySelector('#box3').classList.add('field-event');
+        document.querySelector('#box5').classList.add('field-event');
+        document.querySelector('#box7').classList.add('field-event');
+    }
+}
+
+function blockclick() {
+    box1work = 1;
+    box2work = 1;
+    box3work = 1;
+    box4work = 1;
+    box5work = 1;
+    box6work = 1;
+    box7work = 1;
+    box8work = 1;
+    box9work = 1;
+}
+
+nighttheme.addEventListener('click', function() {
+    document.querySelector('body').style.background = 'rgba(0, 0, 0, 0.896)';
+});
+
+daytheme.addEventListener('click', function() {
+    document.querySelector('body').style.background = 'white';
+});

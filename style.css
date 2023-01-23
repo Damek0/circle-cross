@@ -5,11 +5,12 @@
     font-family: Arial;
 }
 
+
 .box {
     width: 100px;
     height: 100px;
     padding: 20px;
-    border: 1px solid black;
+    border: 1px solid blueviolet;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,6 +47,19 @@ main {
     border-bottom: 0;
 }
 
+.boxborder-event1 {
+    border-bottom: 0;
+    border-right: 0;
+}
+
+.boxborder-event2 {
+    border-right: 0;
+}
+
+.boxborder-event3 {
+    border-bottom: 0;
+}
+
 .object {
     width: 70px;
     height: 70px;
@@ -57,7 +71,7 @@ main {
     padding: 20px;
     width: 200px;
     margin: 20px;
-    background-color: lawngreen;
+    background-color: #017fc9;
 }
 
 #image {
@@ -174,6 +188,53 @@ main {
     background-color: rgb(87, 174, 0);
     transition: 0.3s;
     cursor: pointer;
+}
+
+.preminibar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.minibar {
+    background-color: #017fc9;
+    width: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 52px;
+}
+
+#triangle3 {
+    width: 0;
+	height: 0;
+	border-bottom: 52px solid #017fc9;
+	border-left: 52px solid transparent;
+}
+
+#triangle4{
+	width: 0;
+	height: 0;
+	border-bottom: 52px solid #017fc9;
+	border-right: 52px solid transparent;
+}
+
+.miniicons {
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.miniicons:hover {
+    background-color: #009efa;
+    box-shadow: 1px 1px 10px 1px black;
+    border-radius: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.field-event {
+    box-shadow: 1px 1px 10px 1px #009efa;
 }
 
 @keyframes anim1{
